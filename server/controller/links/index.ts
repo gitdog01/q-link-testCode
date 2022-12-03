@@ -35,6 +35,8 @@ export const handlePost: Handler = async (req, res) => {
     createdAt: Date.now(),
   });
 
+  console.log(insertedId);
+
   if (!insertedId) {
     return res.status(404).json({ success: false });
   }
