@@ -6,6 +6,6 @@ const customJestConfig = {
   displayName: 'client',
   moduleDirectories: ['node_modules', '<rootDir>/'],
   testEnvironment: 'jest-environment-jsdom',
-  testMatch: ['<rootDir>/pages/**/*.test.ts'],
+  testMatch: ['<rootDir>/pages/**/*.test.tsx'],
 };
 module.exports = createJestConfig(customJestConfig);
