@@ -60,4 +60,32 @@ describe('Client Test', () => {
   it('첫 페이지 render', () => {
     expect(component).toMatchSnapshot();
   });
+
+  it('버튼들 잘 되어 있는지', () => {
+    const { getByText } = component;
+
+    const creatButton = getByText('button.create');
+    const infoButton = getByText('button.what');
+    const exampleButton = getByText('button.demo');
+
+    expect(creatButton).toBeVisible();
+    expect(creatButton).toBeEnabled();
+    expect(creatButton).toHaveAttribute('href');
+
+    expect(infoButton).toBeVisible();
+    expect(infoButton).toBeEnabled();
+    expect(infoButton).toHaveAttribute('href');
+
+    expect(exampleButton).toBeVisible();
+    expect(exampleButton).toBeEnabled();
+    expect(exampleButton).toHaveAttribute('href');
+  });
+
+  it('예시 페이지가 잘 랜더 되는지', () => {});
+
+  it('예시 페이지 오답일 경우', () => {});
+
+  it('예시 페이지 정답을 입력할 경우', () => {});
+
+  it('예시 페이지 공유링크 클릭할 경우', () => {});
 });
