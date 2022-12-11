@@ -38,3 +38,6 @@ jest.env.js
 
 # typescript
 *.tsbuildinfo
+
+# snapshot
+/pages/__snapshots__
